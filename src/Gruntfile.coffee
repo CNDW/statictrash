@@ -41,4 +41,5 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks('grunt-emblem')
 
   grunt.registerTask('default', ['watch'])
+  grunt.registerTask('compile', ['copy', 'coffee', 'concat', 'sass'])
   return

@@ -42,4 +42,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-coffee');
   grunt.loadNpmTasks('grunt-emblem');
   grunt.registerTask('default', ['watch']);
+  grunt.registerTask('compile', ['copy', 'coffee', 'concat', 'sass']);
 };

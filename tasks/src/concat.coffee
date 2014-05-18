@@ -10,8 +10,3 @@ module.exports =
 			'<%=config.minJs %>/ember.min.js'
 			'<%=config.minJs %>/ember-data.min.js'
 		]
-	distCss:
-		dest: '<%= config.dist %>/assets/app.css'
-		src: [
-			'<%= config.srcCss %>/app.css'
-		]
