@@ -12,30 +12,6 @@ Simply clone and run
 
 and you are up and running!
 
-The App structure is as follows
-
-|-app
-|
-|-dist
-|   |
-|  assets
-|
-|-specs
-|   |
-|  src
-|
-|-src-----
-|   |    |
-|  _lib  js
-|
-|-styles
-|   |
-|  vendor
-|
-|-tasks
-    |
-   src
-
 The app directory contains the ember app in uncompiled coffescript and emberscript templates. With grunt watch running, it will automatically compile and concatenate the coffescript into app.js in the dist/assets directory and the emblem into templates.js in the dist/assets directory.
 
 The dist directory contains the index.html and most recent compiled copy of the app.js, temp.js, and lib.min.js which contains the basic associated dependencies. Running $grunt concat will concat the dependencies installed by bower and place them in lib.min.js in the dist/assets directory.
