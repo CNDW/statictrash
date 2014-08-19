@@ -1,13 +1,13 @@
-module.exports = 
+module.exports =
   css:
     files: ['styles/*.scss']
     tasks: ['sass']
-  
+
   js:
     files: [
-    	'<%= config.dist %>/assets/app.js'
-      'specs/*Spec.js']
-    tasks: ['jshint', 'jasmine']
+      '<%= config.dist %>/assets/app.js'
+    ]
+    tasks: ['jshint']
 
   coffeeGrunt:
     files: ['src/Gruntfile.coffee']
@@ -25,6 +25,6 @@ module.exports =
     files: ['specs/src/*Spec.coffee']
     tasks: ['coffee:compileSpecs']
 
-  emblem: 
+  emblem:
     files: ['app/templates/*.emblem', 'app/templates/*/*.emblem']
     tasks: ['emblem']

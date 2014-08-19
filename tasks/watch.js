@@ -4,8 +4,8 @@ module.exports = {
     tasks: ['sass']
   },
   js: {
-    files: ['<%= config.dist %>/assets/app.js', 'specs/*Spec.js'],
-    tasks: ['jshint', 'jasmine']
+    files: ['<%= config.dist %>/assets/app.js'],
+    tasks: ['jshint']
   },
   coffeeGrunt: {
     files: ['src/Gruntfile.coffee'],

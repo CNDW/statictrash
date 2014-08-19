@@ -1,7 +1,284 @@
 /* Put your CSS here */
 @import "vendor/bootstrap";
+
+/*============================================
+Variables
+=============================================*/
+
+@font-face {
+  font-family: "Franklin Gothic Condensed";
+  src: url("fonts/FranklinGothic-BookCmpr.ttf");
+}
+@font-face {
+  font-family: "Franklin Gothic Med";
+  src: url("fonts/FranklinGothic-MedCnd.ttf");
+}
+
+/*============================================
+Shame
+=============================================*/
+.splash-image {
+  width: 100%;
+}
+
+.index-header {
+  background: black;
+}
+
+.index-body {
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  top: -3em;
+  div {
+    background-color: white;
+  }
+}
+
+.bag-story {
+  border-color: lightgray;
+  border-left-style: solid;
+  border-width: 1px;
+  &:first-of-type {
+    border-left-style: none;
+  }
+  img {
+    height: 300px;
+  }
+}
+
+.index-newsletter {
+  border-color: lightgray;
+  border-width: 1px;
+  border-top-style: solid;
+  text-align: left;
+  padding: 0;
+  h3 {
+    margin-top: 10px;
+  }
+}
+
+/*============================================
+Main body elements
+=============================================*/
+
 html, body {
-    margin: 20px;
+  font-family: "Franklin Gothic Med";
+}
+
+.top-buffer {
+  padding-top: 60px;
+}
+
+.no-left-padding {
+  padding-left: 0;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.btn-black {
+  @extend .btn-default;
+  color: white;
+  background-color: black;
+  text-transform: uppercase;
+  border-radius: 0;
+}
+.upcase {
+  text-transform: uppercase;
+}
+.gray {
+  color: gray;
+}
+
+.top-border {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: lightgray;
+  &.buffer {
+    margin-top: 20px;
+    padding: 20px 0 0 0;
+  }
+  &.flush {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+//--------------------------------------------
+// Navbar
+//--------------------------------------------
+
+.header {
+  @extend .navbar;
+}
+
+ul.top-navs {
+  @extend .nav;
+  @extend .navbar-nav;
+  @extend .navbar-right;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  font-family: "Franklin Gothic Condensed";
+  li {
+    height: 90px;
+    padding-top: 30px;
+    a {
+      color: inherit;
+    }
+  }
+}
+
+.top-nav {
+  &.active {
+    color: white;
+    background-color: black;
+  }
+}
+
+.glyphicon-shopping-cart {
+  font-size: 1.3em;
+  color: lightgray;
+  margin-top: -6px;
+}
+
+.logo {
+  img {
+    width: 200px;
+  }
+}
+
+//--------------------------------------------
+// Gallery
+//--------------------------------------------
+
+.gallery {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+//--------------------------------------------
+// Blog
+//--------------------------------------------
+
+.blog-sidebar {
+
+}
+
+.post-footer {
+  color: gray;
+  margin-top: 40px;
+  margin-bottom: 80px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: gray;
+}
+
+//--------------------------------------------
+// About
+//--------------------------------------------
+
+
+.contact-header {
+  margin-top: 10px;
+  display: inline-block;
+  &.gray {
+    color: lightgray;
+  }
+}
+.about-images {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.about-crew {
+  img {
+    padding-left: 4px;
+    &:first-of-type {
+      margin-left: -4px;
+    }
+  }
+}
+.about-crew-header {
+  border-top-style: solid;
+  border-top-color: gray;
+  border-top-width: 1px;
+  color: gray;
+  padding-top: 10px;
+  margin-top: 30px;
+}
+.about-crew-body {
+  color: gray;
+}
+.crew-portraits {
+  margin-bottom: 20px;
+}
+.about-address {
+  color: gray;
+  display: inline-block;
+  line-height: 15px;
+  margin-top: -10px;
+}
+
+//--------------------------------------------
+// Footer
+//--------------------------------------------
+
+.footer {
+  @extend navbar;
+  font-family: "Franklin Gothic Condensed";
+  height: 200px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  line-height: 200px;
+  margin-top: 100px;
+}
+.bottom-navs {
+  @extend .nav;
+  @extend .navbar-nav;
+  display: inline-block;
+  float: none;
+  text-transform: uppercase;
+  span {
+    margin-right: 40px;
+  }
+}
+span.trash-icon {
+  background: url("img/trashicon.png") transparent no-repeat 50% 50%;
+  display: inline-block;
+  height: 41px;
+  width: 35px;
+  position: relative;
+  top: 14px;
+}
+span.twitter-icon {
+  background: url("img/twittericon.png") transparent no-repeat 50% 50%;
+  display: inline-block;
+  height: 35px;
+  width: 35px;
+  position: relative;
+  top: 10px;
+  margin-right: 20px;
+}
+span.facebook-icon {
+  background: url("img/facebookicon.png") transparent no-repeat 50% 50%;
+  display: inline-block;
+  height: 35px;
+  width: 35px;
+  position: relative;
+  top: 10px;
+  margin-right: 20px;
+}
+span.instagram-icon {
+  background: url("img/instagramicon.png") transparent no-repeat 50% 50%;
+  display: inline-block;
+  height: 35px;
+  width: 35px;
+  position: relative;
+  top: 10px;
+  margin-right: 20px;
 }
 
 @keyframes domChanged { from { background: yellow; } }

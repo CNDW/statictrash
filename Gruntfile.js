@@ -29,7 +29,6 @@ module.exports = function(grunt) {
     copy: taskConfig('copy'),
     emblem: taskConfig('emblem'),
     uglify: taskConfig('uglify'),
-    jasmine: taskConfig('jasmine'),
     watch: taskConfig('watch')
   });
   grunt.loadNpmTasks('grunt-contrib-sass');
@@ -38,9 +37,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-jasmine');
   grunt.loadNpmTasks('grunt-contrib-coffee');
   grunt.loadNpmTasks('grunt-emblem');
   grunt.registerTask('default', ['watch']);
-  grunt.registerTask('compile', ['copy', 'coffee', 'concat', 'sass']);
+  grunt.registerTask('compile', ['copy', 'coffee', 'emblem', 'concat', 'sass']);
 };

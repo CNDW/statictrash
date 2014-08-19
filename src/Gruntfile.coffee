@@ -1,7 +1,7 @@
 taskConfig = (name)->
   require('./tasks/' + name + '.js')
 
-config = 
+config =
   pkg: require('./package.json')
   app: 'app'
   dist: 'dist'
@@ -12,14 +12,14 @@ config =
   minJs: 'src/js/min'
   vendor: 'src/_lib'
 
-module.exports = (grunt) -> 
+module.exports = (grunt) ->
   'use strict'
 
   grunt.initConfig
     config: config
     pkg: config.pkg
     bower: grunt.file.readJSON('./.bowerrc')
-    
+
     coffee: taskConfig('coffee')
     sass: taskConfig('sass')
     jshint: taskConfig('jshint')
@@ -27,7 +27,6 @@ module.exports = (grunt) ->
     copy: taskConfig('copy')
     emblem: taskConfig('emblem')
     uglify: taskConfig('uglify')
-    jasmine: taskConfig('jasmine')
     watch: taskConfig('watch')
 
   grunt.loadNpmTasks('grunt-contrib-sass')
@@ -36,10 +35,9 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks('grunt-contrib-copy')
   grunt.loadNpmTasks('grunt-contrib-uglify')
   grunt.loadNpmTasks('grunt-contrib-jshint')
-  grunt.loadNpmTasks('grunt-contrib-jasmine')
   grunt.loadNpmTasks('grunt-contrib-coffee')
   grunt.loadNpmTasks('grunt-emblem')
 
   grunt.registerTask('default', ['watch'])
-  grunt.registerTask('compile', ['copy', 'coffee', 'concat', 'sass'])
+  grunt.registerTask('compile', ['copy', 'coffee', 'emblem', 'concat', 'sass'])
   return
