@@ -25,39 +25,6 @@ Shame
   background: black;
 }
 
-.index-body {
-  text-align: center;
-  text-transform: uppercase;
-  position: relative;
-  top: -3em;
-  div {
-    background-color: white;
-  }
-}
-
-.bag-story {
-  border-color: lightgray;
-  border-left-style: solid;
-  border-width: 1px;
-  &:first-of-type {
-    border-left-style: none;
-  }
-  img {
-    height: 300px;
-  }
-}
-
-.index-newsletter {
-  border-color: lightgray;
-  border-width: 1px;
-  border-top-style: solid;
-  text-align: left;
-  padding: 0;
-  h3 {
-    margin-top: 10px;
-  }
-}
-
 /*============================================
 Main body elements
 =============================================*/
@@ -104,6 +71,33 @@ html, body {
     margin-top: 0;
     margin-bottom: 0;
   }
+}
+
+/*============================================
+Parallax
+=============================================*/
+
+.parallax {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.parallax-layer {
+  // position: absolute;
+  // top: 0;
+  // right: 0;
+  // bottom: 0;
+  // left: 0;
+}
+
+.parallax-front {
+  transform: translateZ(1px);
+}
+
+.parallax-back {
+  // transform: translateZ(-1px);
 }
 
 //--------------------------------------------
@@ -226,7 +220,7 @@ ul.top-navs {
 //--------------------------------------------
 
 .footer {
-  @extend navbar;
+  @extend .navbar;
   font-family: "Franklin Gothic Condensed";
   height: 200px;
   background-color: black;

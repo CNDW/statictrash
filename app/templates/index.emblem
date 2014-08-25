@@ -1,19 +1,22 @@
 div.row.index-header
-  div.col-lg-8.col-lg-offset-2
-    img.splash-image src="assets/img/andy1.jpg" alt="loading..."
-div.row.index-body
-  div.col-lg-10.col-lg-offset-1
-    h1 made by hand in minneapolis, minnesota
-  div.col-lg-10.col-lg-offset-1.top-buffer
-    div.col-lg-4.bag-story
-      img src="assets/img/bag3.png" alt="loading..."
-      h3 carries even the most obscenely large cargo
-    div.col-lg-4.bag-story
-      img src="assets/img/bag2.png" alt="loading..."
-      h3 fully customizable from top to bottom
-    div.col-lg-4.bag-story
-      img src="assets/img/bag1.png" alt="loading..."
-      h3 every stitch is gauranteed for life
-  div.col-lg-10.col-lg-offset-1.top-buffer
-    div.col-lg-6
-      img src="assets/img/sweatshop.png" alt="loading..." width="100%"
+div.row.parallax
+  div.col-lg-12.parallax-layer.parallax-back.index-heade
+    div.col-lg-8.col-lg-offset-2
+      img.splash-image src="assets/img/andy1.jpg" alt="loading..."
+  div.col.lg-12.parallax-layer.parallax-front
+    h3 made by hand in minneapolis, minnesota
+  div.col-lg-12.parallax-layer.parallax-back
+    img src="assets/img/andy2.png" alt="loading..." width="100%"
+  div.col.lg-12.parallax-layer.parallax-front
+    img src="assets/img/bag3.png" alt="loading..."
+    h3 carries even the most obscenely large cargo
+  div.col-lg-12.parallax-layer.parallax-back
+    img src="assets/img/andy3.png" alt="loading..." width="100%"
+  div.col.lg-12.parallax-layer.parallax-front
+    img src="assets/img/bag2.png" alt="loading..."
+    h3 fully customizable from top to bottom
+  div.col-lg-12.parallax-layer.parallax-back
+    img src="assets/img/andy4.png" alt="loading..." width="100%"
+  div.col.lg-12.parallax-layer.parallax-front
+    img src="assets/img/bag1.png" alt="loading..."
+    h3 every stitch is gauranteed for life
